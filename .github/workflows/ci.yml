@@ -76,7 +76,7 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     env:
-      PHP_EXTENSIONS: dom, json, libxml, mbstring, pdo_sqlite, soap, xml, xmlwriter
+      PHP_EXTENSIONS: dom, json, libxml, mbstring, pdo_sqlite, soap, xml, xmlwriter, zip
 
     strategy:
       matrix:
