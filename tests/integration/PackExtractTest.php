@@ -1,6 +1,7 @@
 <?php
 namespace Robo;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use Yoast\PHPUnitPolyfills\TestCases\TestCase;
 use Robo\Traits\TestTasksTrait;
 
@@ -35,9 +36,8 @@ class PackExtractTest extends TestCase
 
     /**
      * Test all of the different sorts of archivers
-     *
-     * @dataProvider archiveTypeProvider
      */
+    #[DataProvider('archiveTypeProvider')]
     public function testPackExtract($archiveType)
     {
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {

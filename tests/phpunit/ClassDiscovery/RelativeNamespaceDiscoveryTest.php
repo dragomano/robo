@@ -1,5 +1,6 @@
 <?php
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Robo\ClassDiscovery\RelativeNamespaceDiscovery;
 use Composer\Autoload\ClassLoader;
@@ -42,12 +43,7 @@ class RelativeNamespaceDiscoveryTest extends TestCase
         $this->assertStringEndsWith('ThirdCustomCommand.php', $actual);
     }
 
-    /**
-     * @dataProvider convertPathToNamespaceData
-     *
-     * @param $path
-     * @param $expected
-     */
+    #[DataProvider('convertPathToNamespaceData')]
     public function testConvertPathToNamespace($path, $expected)
     {
         $classLoader = new ClassLoader();
@@ -66,12 +62,7 @@ class RelativeNamespaceDiscoveryTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider convertNamespaceToPathData
-     *
-     * @param $namespace
-     * @param $expected
-     */
+    #[DataProvider('convertNamespaceToPathData')]
     public function testConvertNamespaceToPath($namespace, $expected)
     {
         $classLoader = new ClassLoader();

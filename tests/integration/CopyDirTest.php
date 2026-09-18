@@ -1,6 +1,7 @@
 <?php
 namespace Robo;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use Yoast\PHPUnitPolyfills\TestCases\TestCase;
 use Robo\Traits\TestTasksTrait;
 
@@ -50,9 +51,7 @@ class CopyDirTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider copyDirWithOverwriteData
-     */
+    #[DataProvider('copyDirWithOverwriteData')]
     public function testCopyDirWithOverwrite($overwriteValue, $expected)
     {
         $this->fixtures->createAndCdToSandbox();
