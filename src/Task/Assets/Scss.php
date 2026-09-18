@@ -135,11 +135,11 @@ class Scss extends CssPreprocessor
      */
     protected function sassEmbedded($file)
     {
-        if (!class_exists('\Bugo\Sass\EmbeddedCompiler')) {
-            return Result::errorMissingPackage($this, 'Bugo\\Sass\\EmbeddedCompiler', 'bugo/sass-embedded-php');
+        if (!class_exists('\Bugo\Sass\Compiler')) {
+            return Result::errorMissingPackage($this, 'Bugo\\Sass\\Compiler', 'bugo/sass-embedded-php');
         }
 
-        $compiler = new \Bugo\Sass\EmbeddedCompiler();
+        $compiler = new \Bugo\Sass\Compiler();
 
         return $compiler->compileFile($file, new \Bugo\Sass\Options(
             loadPaths: $this->compilerOptions['importDirs'] ?? null,
