@@ -1,11 +1,9 @@
 <?php
 
-use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Robo\Traits\Common\CommandArgumentsHost;
 
-#[CoversClass(\Robo\Common\CommandArguments::class)]
 class CommandArgumentsTest extends TestCase
 {
     public static function casesArgs() {
