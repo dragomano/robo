@@ -178,8 +178,8 @@ Use one of the scss compilers in your project:
 
 ```
 "scssphp/scssphp": "^2.1",
-"bugo/scss-php": "^0.8",
-"bugo/sass-embedded-php": "^0.9"
+"bugo/scss-php": "^0.9",
+"bugo/sass-embedded-php": "^1.1"
 ```
 
 Specify directory (string or array) for scss imports lookup:

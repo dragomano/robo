@@ -29,7 +29,7 @@
         "consolidation/log": "^3",
         "consolidation/output-formatters": "^4.7",
         "consolidation/self-update": "*",
-        "league/container": "^5.0",
+        "league/container": "^5.2",
         "phpowermove/docblock": "^4.0",
         "symfony/console": "^7 || ^8",
         "symfony/event-dispatcher": "^7 || ^8",
@@ -39,8 +39,8 @@
         "symfony/yaml": "^7 || ^8"
     },
     "require-dev": {
-        "bugo/sass-embedded-php": "^0.9",
-        "bugo/scss-php": "^0.8",
+        "bugo/sass-embedded-php": "^1.1",
+        "bugo/scss-php": "^0.9",
         "natxet/cssmin": "3.0.4",
         "patchwork/jsqueeze": "^2",
         "pear/archive_tar": "^1.6",

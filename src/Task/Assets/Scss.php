@@ -21,8 +21,8 @@ use Robo\Result;
  *
  * ```
  * "scssphp/scssphp": "^2.1",
- * "bugo/scss-php": "^0.8",
- * "bugo/sass-embedded-php": "^0.9"
+ * "bugo/scss-php": "^0.9",
+ * "bugo/sass-embedded-php": "^1.1"
  * ```
  *
  * Specify directory (string or array) for scss imports lookup:
@@ -135,11 +135,11 @@ class Scss extends CssPreprocessor
      */
     protected function sassEmbedded($file)
     {
-        if (!class_exists('\Bugo\Sass\Compiler')) {
-            return Result::errorMissingPackage($this, 'Bugo\\Sass\\Compiler', 'bugo/sass-embedded-php');
+        if (!class_exists('\Bugo\Sass\EmbeddedCompiler')) {
+            return Result::errorMissingPackage($this, 'Bugo\\Sass\\EmbeddedCompiler', 'bugo/sass-embedded-php');
         }
 
-        $compiler = new \Bugo\Sass\Compiler();
+        $compiler = new \Bugo\Sass\EmbeddedCompiler();
 
         return $compiler->compileFile($file, new \Bugo\Sass\Options(
             loadPaths: $this->compilerOptions['importDirs'] ?? null,

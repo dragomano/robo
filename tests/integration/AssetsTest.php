@@ -146,7 +146,7 @@ SCSS
 
     public function testScssCompilationWithSassEmbeddedCompiler()
     {
-        if (! class_exists('\Bugo\Sass\Compiler')) {
+        if (! class_exists('\Bugo\Sass\EmbeddedCompiler')) {
             $this->markTestSkipped('bugo/sass-embedded-php is not installed.');
         }
 
