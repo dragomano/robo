@@ -74,7 +74,7 @@ jobs:
     name: Tests
 
     runs-on: ${{ matrix.os }}
-
+    timeout-minutes: 5
     env:
       PHP_EXTENSIONS: dom, json, libxml, mbstring, pdo_sqlite, soap, xml, xmlwriter, zip
 
